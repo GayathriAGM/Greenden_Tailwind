@@ -11,34 +11,53 @@
 </head>
 
 <body>
-    <!-- Responsive Navbar -->
-    <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
+      <!-- Responsive Navbar -->
+      <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
+
+
         <ul class="gap-5 text-gray-600 hidden md:flex">
             <li class="hover:text-black hover:underline">
-                <a href="./index.html" target="_blank">Home</a>
+                <a href="./index.html">Home</a>
             </li>
             <li class="hover:text-black hover:underline">
-                <a href="#" target="_blank">Products</a>
+                <a href="#">Products</a>
             </li>
             <li class="hover:text-black hover:underline">
-                <a href="./contact.html" target="_blank">Contact Us</a>
+                <a href="./contact.html" >Contact Us</a>
             </li>
         </ul>
     </nav>
+    <!-- Side Navbar -->
+     <section id="sidenav" class="bg-green-100 top-0 z-20 fixed transition-all duration-1000" style=" width:50%; height:100vh; right:-50%">
+        <div class="text-right p-5">
+            <p id="closeNav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="gap-10 text-gray-600 flex flex-col items-center">
+            <li class="hover:text-black hover:underline">
+                <a href="./index.html">Home</a>
+            </li>
+            <li class="hover:text-black hover:underline">
+                <a href="#">Products</a>
+            </li>
+            <li class="hover:text-black hover:underline">
+                <a href="./contact.html">Contact Us</a>
+            </li>
+        </ul>
+     </section>
     <!-- Search Section -->
     <section class="text-center mb-5">
         <h1 class="font-bold mt-10 text-3xl text-center">Our Products</h1>
-        <input type="email" class="border border-black p-1 m-3" style="width:70%"><br>
+        <input id="search" type="email" class="border border-black p-1 m-3" style="width:70%"><br>
     </section>
     <!-- Product Section -->
     <section class="p4 text-center">
-        <div class=" grid grid-cols-2 md:grid-cols-4 mt-7 mb-10 gap-5">
+        <div id="productSection" class=" grid grid-cols-2 md:grid-cols-4 mt-7 mb-10 gap-5">
             <div>
                 <img src="./Images/Bestsellers_1.png" alt="Bestsellers"
                     class="inline hover:shadow-2xl transform hover:-translate-y-2">
@@ -117,6 +136,8 @@
         </ul>
         <p>&copy; 2024 All Reights Reserved.</p>
     </section>
+    <!-- Script Styling -->
+     <script src="product.js"></script>
 </body>
 
 </html>
